@@ -10,7 +10,8 @@ jobs:
           command: |
             aws cloudformation deploy \
               --template-file template.yml \
-              --stack-name cicd-devops-stack
+              --stack-name cicd-devops-stack \
+              --region=us-west-2
 workflows:
   deploy_infrastructure:
     jobs:
